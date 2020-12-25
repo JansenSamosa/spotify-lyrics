@@ -16,6 +16,9 @@ export class App extends Component {
         this.state = {
             authenticated: false
         }
+
+        this.domain = "https://jansensamosa.github.io/spotify-lyrics/#/"
+        //https://jansensamosa.github.io/spotify-lyrics/#/
     }
 
     componentDidMount() {
@@ -52,8 +55,8 @@ export class App extends Component {
                 this.getAndCheckToken()
             })
             .catch(error => {
-                if(window.location.href != "https://jansensamosa.github.io/spotify-lyrics/#/") {
-                    window.location.href = "https://jansensamosa.github.io/spotify-lyrics/#/"
+                if(window.location.href != this.domain) {
+                    window.location.href = this.domain
                 }
             })
     }
@@ -65,8 +68,8 @@ export class App extends Component {
                 this.getAndCheckToken()
             })
             .catch(error => {
-                if(window.location.href != "https://jansensamosa.github.io/spotify-lyrics/#/") {
-                    window.location.href = "https://jansensamosa.github.io/spotify-lyrics/#/"
+                if(window.location.href != this.domain) {
+                    window.location.href = this.domain
                 }
             })
     }
@@ -84,7 +87,7 @@ export class App extends Component {
     logout = () => {
         localStorage.clear()
         this.setState({...this.state, authenticated: false})
-        window.location.href = "https://jansensamosa.github.io/spotify-lyrics/#/"
+        window.location.href = this.domain
     }
 
     renderLogout = () => {
@@ -111,7 +114,7 @@ export class App extends Component {
                             {this.renderLogout()}
                         </Route>
                         <Route path = '/'>
-                            <HomePage login={this.login.bind()}></HomePage>
+                            <HomePage login={this.login.bind(this)}></HomePage>
                         </Route>
                     </Switch>
                 </div>

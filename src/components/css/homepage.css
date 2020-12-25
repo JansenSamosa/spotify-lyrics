@@ -20,14 +20,15 @@
     .home .info .desc {
         font-size: 20px;
     }
-    .home .info .btntag {
-        position: relative;
-        top:20%;
+    .home .info .login {
+        position:relative;
+        top:25%;
+        margin: 0;
+    }
+    .home .info .login .btntag {
         font-size: 20px;
     }
-    .home .info button {
-        position: relative;
-        top:20%;    
+    .home .info .login button {
         margin:auto;
         color:white;
         width:120px;
