@@ -14,7 +14,7 @@ export class HomePage extends Component {
                     </p>
                     <div className="login">
                         <p className="btntag">Login with: </p>
-                        <button className="loginbtn" onClick={this.props.login} onTouchStart={this.props.login}>
+                        <button className="loginbtn" onClick={this.props.login} >
                             <img src={spotifylogo} alt=''></img>
                         </button>
                     </div>
