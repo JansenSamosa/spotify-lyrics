@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/spotify-lyrics/static/css/main.0db071ab.chunk.css",
-    "main.js": "/spotify-lyrics/static/js/main.dec8561a.chunk.js",
-    "main.js.map": "/spotify-lyrics/static/js/main.dec8561a.chunk.js.map",
+    "main.css": "/spotify-lyrics/static/css/main.25782895.chunk.css",
+    "main.js": "/spotify-lyrics/static/js/main.eb581fa4.chunk.js",
+    "main.js.map": "/spotify-lyrics/static/js/main.eb581fa4.chunk.js.map",
     "runtime-main.js": "/spotify-lyrics/static/js/runtime-main.8f980f4f.js",
     "runtime-main.js.map": "/spotify-lyrics/static/js/runtime-main.8f980f4f.js.map",
     "static/js/2.4f71aaa8.chunk.js": "/spotify-lyrics/static/js/2.4f71aaa8.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.85fefc55.chunk.js": "/spotify-lyrics/static/js/3.85fefc55.chunk.js",
     "static/js/3.85fefc55.chunk.js.map": "/spotify-lyrics/static/js/3.85fefc55.chunk.js.map",
     "index.html": "/spotify-lyrics/index.html",
-    "static/css/main.0db071ab.chunk.css.map": "/spotify-lyrics/static/css/main.0db071ab.chunk.css.map",
+    "static/css/main.25782895.chunk.css.map": "/spotify-lyrics/static/css/main.25782895.chunk.css.map",
     "static/js/2.4f71aaa8.chunk.js.LICENSE.txt": "/spotify-lyrics/static/js/2.4f71aaa8.chunk.js.LICENSE.txt",
     "static/media/spotify.0c4ae91b.png": "/spotify-lyrics/static/media/spotify.0c4ae91b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8f980f4f.js",
     "static/js/2.4f71aaa8.chunk.js",
-    "static/css/main.0db071ab.chunk.css",
-    "static/js/main.dec8561a.chunk.js"
+    "static/css/main.25782895.chunk.css",
+    "static/js/main.eb581fa4.chunk.js"
   ]
 }
