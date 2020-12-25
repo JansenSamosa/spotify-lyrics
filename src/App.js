@@ -52,8 +52,8 @@ export class App extends Component {
                 this.getAndCheckToken()
             })
             .catch(error => {
-                if(window.location.href != "https://jansensamosa.github.io/spotify-lyrics/") {
-                    window.location.href = "https://jansensamosa.github.io/spotify-lyrics/"
+                if(window.location.href != "https://jansensamosa.github.io/spotify-lyrics/#/") {
+                    window.location.href = "https://jansensamosa.github.io/spotify-lyrics/#/"
                 }
             })
     }
@@ -65,8 +65,8 @@ export class App extends Component {
                 this.getAndCheckToken()
             })
             .catch(error => {
-                if(window.location.href != "https://jansensamosa.github.io/spotify-lyrics/") {
-                    window.location.href = "https://jansensamosa.github.io/spotify-lyrics/"
+                if(window.location.href != "https://jansensamosa.github.io/spotify-lyrics/#/") {
+                    window.location.href = "https://jansensamosa.github.io/spotify-lyrics/#/"
                 }
             })
     }
@@ -84,7 +84,7 @@ export class App extends Component {
     logout = () => {
         localStorage.clear()
         this.setState({...this.state, authenticated: false})
-        window.location.href = "https://jansensamosa.github.io/spotify-lyrics/"
+        window.location.href = "https://jansensamosa.github.io/spotify-lyrics/#/"
     }
 
     renderLogout = () => {
