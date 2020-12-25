@@ -43,6 +43,7 @@
     .home .info button img {
         height: 100%;
         float:left;
+        pointer-events: none;
     }
 }
 
