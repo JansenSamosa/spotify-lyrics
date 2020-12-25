@@ -30,7 +30,7 @@ export class App extends Component {
         if(localStorage.getItem('access_token') != null) {
             let token = localStorage.getItem('access_token')
             //Checks if token still valid
-            axios.get(`http://127.0.0.1:5000/api/v1/playing?token=${token}`)
+            axios.get(`https://spotify-lyrics-api.herokuapp.com/api/v1/playing?token=${token}`)
                 .then(res => {
                     //If still valid then the user is authenticated
                     this.setState({...this.state, authenticated: true})
@@ -47,7 +47,7 @@ export class App extends Component {
         }
     }
     getTokenByCode = code => {
-        axios.post(`http://127.0.0.1:5000/api/v1/auth/token/code?code=${code}`)
+        axios.post(`https://spotify-lyrics-api.herokuapp.com/api/v1/auth/token/code?code=${code}`)
             .then(res => {
                 console.log(res.data)
                 localStorage.setItem('access_token', res.data['access_token'])
@@ -61,7 +61,7 @@ export class App extends Component {
             })
     }
     getTokenByRefresh = refresh_token => {
-        axios.post(`http://127.0.0.1:5000/api/v1/auth/token/refresh?refresh_token=${refresh_token}`)
+        axios.post(`https://spotify-lyrics-api.herokuapp.com/api/v1/auth/token/refresh?refresh_token=${refresh_token}`)
             .then(res => {
                 console.log(res.data)
                 localStorage.setItem('access_token', res.data['access_token'])
@@ -76,7 +76,7 @@ export class App extends Component {
     login = () => {
         localStorage.clear()
         this.setState({...this.state, authenticated: false})
-        axios.get('http://127.0.0.1:5000/api/v1/auth/login')
+        axios.get('https://spotify-lyrics-api.herokuapp.com/api/v1/auth/login')
             .then(res => {
                 let url = res.data
                 window.location.href = url

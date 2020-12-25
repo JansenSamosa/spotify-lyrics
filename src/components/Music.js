@@ -76,7 +76,7 @@ export class Music extends Component {
     //Get lyrics to current song and sets the state to it
     getPlayingLyrics = () => {
         this.setState({...this.state, lyrics: ["Loading..."]})
-        axios.get('http://127.0.0.1:5000/api/v1/playing/lyrics', { params: {token: localStorage.getItem('access_token')}})
+        axios.get('https://spotify-lyrics-api.herokuapp.com/api/v1/playing/lyrics', { params: {token: localStorage.getItem('access_token')}})
             .then(res => {
                 this.setState({...this.state, lyrics: res.data})
             })
@@ -85,7 +85,7 @@ export class Music extends Component {
     //Gets the current song playing, but not the lyrics
     getPlaying = () => {    
         //Get data  
-        axios.get('http://127.0.0.1:5000/api/v1/playing', { params: {token: localStorage.getItem('access_token')}})
+        axios.get('https://spotify-lyrics-api.herokuapp.com/api/v1/playing', { params: {token: localStorage.getItem('access_token')}})
             .then(res => {
                 if(res.status === 200) {
                     //Extracts the important info from data
@@ -133,7 +133,7 @@ export class Music extends Component {
     }
 
     skipTrack = (type) => {
-        axios.get(`http://127.0.0.1:5000/api/v1/user/profile?token=${localStorage.getItem('access_token')}`)
+        axios.get(`https://spotify-lyrics-api.herokuapp.com/api/v1/user/profile?token=${localStorage.getItem('access_token')}`)
             .then(res => {
                 if(res.data['product'] === 'premium') {
                     this.song_progress = 0
@@ -146,7 +146,7 @@ export class Music extends Component {
                     })
 
                     if (type == "next"|| type == "previous") {
-                        axios.post(`http://127.0.0.1:5000/api/v1/playing/skip/${type}?token=${localStorage.getItem('access_token')}`)
+                        axios.post(`https://spotify-lyrics-api.herokuapp.com/api/v1/playing/skip/${type}?token=${localStorage.getItem('access_token')}`)
                             .then(res => {
                                 setTimeout(() => {
                                     this.getPlaying()
@@ -167,7 +167,7 @@ export class Music extends Component {
     }
 
     pauseTrack = () => {
-        axios.get(`http://127.0.0.1:5000/api/v1/user/profile?token=${localStorage.getItem('access_token')}`)
+        axios.get(`https://spotify-lyrics-api.herokuapp.com/api/v1/user/profile?token=${localStorage.getItem('access_token')}`)
             .then(res => {
                 console.log(res.data)
                 if(res.data['product'] === 'premium') {
@@ -179,7 +179,7 @@ export class Music extends Component {
                         this.setState({...this.state, is_playing: false})
                     }
 
-                    axios.put(`http://127.0.0.1:5000/api/v1/playing/${type}?token=${localStorage.getItem('access_token')}`)
+                    axios.put(`https://spotify-lyrics-api.herokuapp.com/api/v1/playing/${type}?token=${localStorage.getItem('access_token')}`)
                         .then(res => {
                             this.getPlaying()
                         }) .catch(error => {
