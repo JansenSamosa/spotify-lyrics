@@ -38,6 +38,7 @@
         background: rgb(24, 24, 24);
         padding:10px;
         box-shadow: 2px 2px 2px black;
+        cursor: pointer;
     }
 
     .home .info button img {
