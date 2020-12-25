@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link, NavLink, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Link, NavLink, Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 import HomePage from './components/HomePage'
@@ -102,7 +102,7 @@ export class App extends Component {
 
     render() {
         return (
-            <Router>
+            <Router basename=''>
                 <div className='App'>
                     {this.redirect()}
                     <Switch>            
