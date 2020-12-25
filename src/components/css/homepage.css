@@ -1,0 +1,85 @@
+@media only screen and (orientation:portrait) {
+    .home {
+        overflow: hidden;
+        width:100vw;
+        height:100vh;
+        margin:0;
+        padding:0;
+        color: white;
+        background: #222222;
+        display:flex;
+        text-shadow:1.5px 1.5px .5px black;
+    }
+
+    .home .info {
+        margin:10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .home .info .desc {
+        font-size: 20px;
+    }
+    .home .info .btntag {
+        position: relative;
+        top:20%;
+        font-size: 20px;
+    }
+    .home .info button {
+        position: relative;
+        top:20%;    
+        margin:auto;
+        color:white;
+        width:120px;
+        height:50px;
+        border: none;
+        border-radius: 100px;
+        background: rgb(24, 24, 24);
+        padding:10px;
+        box-shadow: 2px 2px 2px black;
+    }
+
+    .home .info button img {
+        height: 100%;
+        float:left;
+    }
+}
+
+@media only screen and (orientation:landscape) {
+    .home {
+        width:100vw;
+        height:100vh;
+        margin:0;
+        padding:0;
+        color: white;
+        background: #222222;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow:1.5px 1.5px .5px black;
+    }
+    .home .info .desc {
+        font-size: 20px;
+    }
+    .home .info .btntag {
+        font-size: 20px;
+    }
+    .home .info button {
+        cursor: pointer;
+        margin:auto;
+        color:white;
+        width:120px;
+        height:50px;
+        position:absolute;
+        border: none;
+        border-radius: 100px;
+        background: rgb(24, 24, 24);
+        padding:10px;
+        box-shadow: 2px 2px 2px black;
+    }
+
+    .home .info button img {
+        height: 100%;
+        float:left;
+    }
+}
