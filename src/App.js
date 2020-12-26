@@ -17,7 +17,7 @@ export class App extends Component {
             authenticated: false
         }
 
-        this.domain = "localhost:3000"
+        this.domain = "https://jansensamosa.github.io/spotify-lyrics/#/"
         //https://jansensamosa.github.io/spotify-lyrics/#/
     }
 
