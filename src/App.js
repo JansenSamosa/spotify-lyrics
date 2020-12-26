@@ -49,7 +49,6 @@ export class App extends Component {
     getTokenByCode = code => {
         axios.post(`https://spotify-lyrics-api.herokuapp.com/api/v1/auth/token/code?code=${code}`)
             .then(res => {
-                console.log(res.data)
                 localStorage.setItem('access_token', res.data['access_token'])
                 localStorage.setItem('refresh_token', res.data['refresh_token'])
                 this.getAndCheckToken()

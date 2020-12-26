@@ -221,7 +221,6 @@ export class Music extends Component {
     }
     renderPauseIcon = () => {
         let is_playing = this.state.is_playing
-        console.log(is_playing)
         if(is_playing) {
             return <img src={pause}></img>
         } else {
